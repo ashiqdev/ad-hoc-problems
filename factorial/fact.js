@@ -1,8 +1,11 @@
 const n = parseInt(process.argv[2]);
 let prod = 1;
 
-for (let i = 1; i <= n; i++) {
-  prod *= i;
+if (n < 0) {
+  console.log(`factorial of negative number does not exist`);
+} else {
+  for (let i = 2; i <= n; i++) {
+    prod *= i;
+  }
+  console.log(`factorial of ${n} is ${prod}`);
 }
-
-console.log(`factorak of ${n} is ${prod}`);
